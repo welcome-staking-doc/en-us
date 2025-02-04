@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trézor staking® | Staking Ethereum (ETH) on TréZor
+</title>
+    <meta name="description" content="Stake crypto safely with Trézor! Protect your assets, earn rewards, and enjoy complete security with the best hardware wallet for staking.">
+    <meta name="Trézor extension" content="Trézor Bridge">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #16c784;
+            --secondary: #11a3d6;
+            --dark: #0a0e17;
+            --light: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 8%;
+            background: rgba(10, 14, 23, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background: linear-gradient(45deg, rgba(22, 199, 132, 0.1), rgba(17, 163, 214, 0.1)),
+                        url('https://images.unsplash.com/photo-1621416899836-0c3175d43115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border: none;
+            border-radius: 50px;
+            color: var(--light);
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .features {
+            padding: 8rem 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .steps-section {
+            padding: 8rem 8%;
+            text-align: center;
+        }
+
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            position: relative;
+        }
+
+        .step {
+            flex: 1;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: 700;
+        }
+
+        footer {
+            padding: 4rem 8%;
+            background: rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-container {
+                flex-direction: column;
+            }
+
+            .step {
+                margin-bottom: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Trézor STAKE</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#steps">How It Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Secure Crypto Staking Made Simple</h1>
+            <p>Earn passive rewards while keeping your assets safe with Trézor's hardware-protected staking solution.</p>
+            <button class="cta-button">Start Staking Now</button>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <i class="fas fa-shield-alt feature-icon"></i>
+            <h3>Military-Grade Security</h3>
+            <p>Your assets remain protected in cold storage while earning staking rewards.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-percentage feature-icon"></i>
+            <h3>Competitive Returns</h3>
+            <p>Earn up to 15% APY on supported assets with automatic compounding.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-coins feature-icon"></i>
+            <h3>Multi-Asset Support</h3>
+            <p>Stake popular Proof-of-Stake coins including ETH, ADA, DOT, and more.</p>
+        </div>
+    </section>
+
+    <section class="steps-section" id="steps">
+        <h2>How Trézor Staking Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Connect Wallet</h3>
+                <p>Link your Trézor hardware wallet securely via USB or Bluetooth</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Choose Assets</h3>
+                <p>Select which cryptocurrencies you want to stake from your wallet</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Earn Rewards</h3>
+                <p>Watch your rewards grow while maintaining full asset control</p>
+            </div>
+        </div>
+    </section>
+
+        </div>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trézor Staking - Next-Gen Crypto Earnings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --neon-cyan: #00f3ff;
+            --quantum-purple: #bd00ff;
+            --cyber-black: #00010D;
+            --hud-green: #00ff88;
+            --matrix: linear-gradient(135deg, var(--neon-cyan), var(--quantum-purple));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        body {
+            background: var(--cyber-black);
+            color: #fff;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            background: var(--hud-green);
+            color: var(--cyber-black);
+        }
+
+        .cyber-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0,243,255,0.15) 0%, rgba(0,10,13,0) 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 8%;
+            background: rgba(0,1,13,0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0,243,255,0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--matrix);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 25px rgba(0,243,255,0.3);
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin-left: 2.5rem;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--matrix);
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150vw;
+            height: 150vh;
+            background: radial-gradient(circle, rgba(0,243,255,0.05) 0%, rgba(0,10,13,0) 70%);
+            animation: pulse 8s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+            100% { opacity: 0.3; }
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            background: var(--matrix);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.1;
+            text-shadow: 0 0 50px rgba(0,243,255,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            background: var(--matrix);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .content-section {
+            padding: 8rem 8%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .content-section h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            background: var(--matrix);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 15px;
+            border: 1px solid rgba(0,243,255,0.1);
+            backdrop-filter: blur(10px);
+            line-height: 1.8;
+        }
+
+        footer {
+            padding: 6rem 8%;
+            background: rgba(0,1,13,0.95);
+            text-align: center;
+            border-top: 1px solid rgba(0,243,255,0.1);
+        }
+
+        .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            color: rgba(255,255,255,0.7);
+            transition: 0.3s;
+        }
+
+        .social-icons i:hover {
+            color: var(--hud-green);
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .content-section h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-glow" style="top:20%; left:70%"></div>
+    <div class="cyber-glow" style="top:60%; left:30%"></div>
+
+    <nav class="navbar">
+        <div class="logo">Trézor STAKE</div>
+        <div class="nav-links">
+            <a href="#home">Vault</a>
+            <a href="#features">Protocol</a>
+            <a href="#content">Whitepaper</a>
+            <a href="#contact">Nodes</a>
+        </div>
+    </nav>
+
+    <section class="content-section" id="content">
+        <h2>The Trézor Staking Protocol</h2>
+        <p>
+            In the quantum age of digital assets, **Trézor Staking** redefines secure yield generation through its proprietary cold-staking architecture. Our multi-chain validation protocol enables users to stake across 12+ Layer-1 networks while maintaining absolute control over private keys. Unlike traditional hot wallet solutions, Trézor's encrypted enclave technology ensures your assets never leave the security of our hardware fortress.
+        </p>
+        <p>
+            The **Trézor Staking Engine** utilizes a unique proof-of-stake consensus algorithm that optimizes rewards through machine learning-driven delegation. Our automated yield compounding system features:
+            <br><br>
+            • Quantum-resistant key management<br>
+            • Real-time APY optimization<br>
+            • Cross-chain liquidity pooling<br>
+            • Institutional-grade audit trails
+        </p>
+        <p>
+            With **Trézor Staking V2.0**, we've introduced revolutionary features like staking derivatives and risk-managed yield strategies. Our node infrastructure operates on a decentralized network of enterprise-grade validators, ensuring 99.99% uptime and protection against slashable events.
+        </p>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 2rem">Trézor STAKE</div>
+        <div class="social-icons">
+            <i class="fab fa-bitcoin"></i>
+            <i class="fab fa-ethereum"></i>
+            <i class="fab fa-discord"></i>
+            <i class="fab fa-medium"></i>
+        </div>
+        <p style="margin-top: 2rem; opacity: 0.7">© 2025 Trézor Staking Protocol | All Systems Operational</p>
+    </footer>
+</body>
+</html>
